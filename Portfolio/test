@@ -1,0 +1,104 @@
+<template>
+  <div class="slider">
+    <button @click="prev" type="button" class="btn btn-left">
+      <img src="../assets/chevron-left.svg" alt="chevron_left" class="icone" />
+    </button>
+    <div
+      class="container-slides"
+      :style="{
+        transform: `translateX(${index}px)`,
+        transition: `${transition}`,
+      }"
+    >
+      <img src="../assets/acceuil_img1.jpg" alt="" class="img-slider" />
+      <img src="../assets/acceuil_img2.jpg" alt="" class="img-slider" />
+      <img src="../assets/acceuil_img3.jpg" alt="" class="img-slider" />
+      <img src="../assets/acceuil_img4.jpg" alt="" class="img-slider" />
+    </div>
+    <button @click="next" type="button" class="btn btn-right">
+      <img
+        src="../assets/chevron-right.svg"
+        alt="chevron_right"
+        class="icone"
+      />
+    </button>
+  </div>
+</template>
+<script>
+export default {
+  name: "Slider",
+  data: function () {
+    return {
+      index: 0,
+      transition: "transform 0.2s ease",
+    };
+  },
+  methods: {
+    next() {
+      console.log(this.index);
+      if (this.index === -3000) {
+        this.transition = "none";
+        this.index = 0;
+      } else {
+        this.transition = "trasform 0.2s ease";
+        this.index -= 1500;
+        console.log(this.transition);
+      }
+    },
+  },
+};
+</script>
+<style scoped>
+.slider {
+  width:100%;
+  height: 750px;
+  margin: 100px auto 0;
+  overflow: hidden;
+  position: relative;
+  
+}
+.container-slides {
+  display: flex;
+}
+.img-slider {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.btn {
+  margin-left: 30px;
+  outline: none;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  z-index: 1000;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.icone {
+  width: 15px;
+}
+.btn-left {
+  top: 50%;
+  left: 5px;
+  transform: translate(-50%);
+}
+.btn-right {
+  top: 50%;
+  right: 5px;
+  transform: translate(-50%);
+}
+</style>
+
+//
+<div class="title">
+    //   <h1 class="mb-3 h2">Développeur Freelance</h1>
+    //   <p>À votre service</p>
+    // </div>
