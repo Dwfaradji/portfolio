@@ -79,7 +79,7 @@ export default {
   /* height: 500px; */
   margin-bottom: 50px;
   opacity: 0;
-  transition: 1.5s all 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 1.5s all  cubic-bezier(0.39, 0.575, 0.565, 1);
   transform: scale(0.5);
   box-sizing: border-box;
   padding: 20px;

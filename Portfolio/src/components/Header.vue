@@ -4,7 +4,7 @@
       id="scroll"
       class="navbar navbar-expand-lg justify-content-between size fixed-top bar-fix"
     >
-      <a id="logo-scroll" class="navbar-brand">DEVWIN</a>
+      <a id="logo-scroll" class="navbar-brand">DEVCOPS</a>
       <!-- toggle -->
       <button
         id="toggle-scroll"
@@ -86,9 +86,6 @@ export default {
 <style scoped>
 a {
   color: inherit;
-}
-.bar-fix {
-  border: 2px solid black;
 }
 .anim {
   transition: 0.4s;
