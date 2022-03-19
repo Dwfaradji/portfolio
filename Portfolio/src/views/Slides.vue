@@ -57,7 +57,13 @@ p {
   bottom: 40rem;
   display: flex;
   justify-content: center;
-  color: red;
+  color: white;
+    font-size: 2rem;
+}
+h1 {
+  color: black;
+  
+  font-size: 5rem;
 }
 .carousel {
   position: relative;

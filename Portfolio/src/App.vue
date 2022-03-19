@@ -2,26 +2,21 @@
   <div id="nav">
     <Header />
     <Acceuil id="home" />
-    <transition class="fade-in">
-      <div id="propos">
-        <Apropos />
-      </div>
-    </transition>
+    <div id="propos">
+      <Apropos />
+    </div>
     <div class="img-bar">
       <div class="img-fond picture1"></div>
     </div>
-    <transition class="fade-in">
-      <Portfolio id="portfolio" />
-    </transition>
+    <Portfolio id="portfolio" />
     <div class="img-bar">
       <div class="img-fond picture2"></div>
     </div>
-    <transition class="fade-in">
-      <Competences id="competences" />
-    </transition>
+    <Competences id="competences" />
     <div class="img-bar">
       <div class="img-fond picture3"></div>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -31,6 +26,8 @@ import Acceuil from "./components/Acceuil";
 import Apropos from "./components/Apropos";
 import Portfolio from "./components/Portfolio";
 import Competences from "./components/Competences";
+import Footer from "./components/Footer";
+
 export default {
   name: "App",
   components: {
@@ -39,6 +36,7 @@ export default {
     Apropos,
     Portfolio,
     Competences,
+    Footer,
   },
   fadeInElements: [],
   methods: {
@@ -62,10 +60,9 @@ export default {
   },
   mounted() {
     this.fadeInElements = Array.from(
-      document.getElementsByClassName("fade-in"),
+      document.getElementsByClassName("fade-in")
     );
     document.addEventListener("scroll", this.handleScroll);
-  
   },
   unmounted() {
     document.removeEventListener("scroll", this.handleScroll);
@@ -79,13 +76,11 @@ export default {
   /* height: 500px; */
   margin-bottom: 50px;
   opacity: 0;
-  transition: 1.5s all  cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 1.5s all cubic-bezier(0.39, 0.575, 0.565, 1);
   transform: scale(0.5);
   box-sizing: border-box;
   padding: 20px;
 }
-
-// +++++++============================
 .img-bar {
   margin-top: 3rem;
   height: 300px;

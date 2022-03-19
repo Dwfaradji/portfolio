@@ -1,5 +1,4 @@
 <template>
-
   <div><Slides /></div>
 </template>
 
