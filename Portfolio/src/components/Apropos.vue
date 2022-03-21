@@ -42,10 +42,11 @@ export default {
 <style scoped>
 @media (min-width: 576px) {
   .parent {
-    width: 80%;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
   }
+
 }
 .fade-in {
   /* height: 500px; */

@@ -4,7 +4,7 @@
       :navigation="true"
       :pagination="false"
       :startAutoPay="true"
-      :timeout="2000"
+      :timeout="3500"
       class="carousel"
       v-slot="{ currentSlide }"
     >
@@ -53,16 +53,17 @@ export default {
 <style lang="scss" scoped>
 h1,
 p {
+  text-align: center;
   position: relative;
   bottom: 40rem;
   display: flex;
   justify-content: center;
   color: white;
-    font-size: 2rem;
+  font-size: 2rem;
 }
 h1 {
   color: black;
-  
+
   font-size: 5rem;
 }
 .carousel {

@@ -5,10 +5,14 @@
       <p>Tout les projets réaliser</p>
     </div>
 
-    <div class="row d-flex justify-content-between col-sm-12">
+    <div class="row d-flex justify-content-between col-sm-12 parent">
       <transition class="fade-in">
         <div class="card mb-5 style-width">
-          <a class="hover-style" href="https://dwfaradji.github.io/FaradjiBoucif_2_27052021/" target="_blank">
+          <a
+            class="hover-style"
+            href="https://dwfaradji.github.io/FaradjiBoucif_2_27052021/"
+            target="_blank"
+          >
             <img
               class="card-img-top"
               src="../assets/reservia.jpg"
@@ -22,7 +26,11 @@
       </transition>
       <transition class="fade-in">
         <div class="card mb-5 style-width">
-          <a class="hover-style" href="https://dwfaradji.github.io/FaradjiBoucif_3_27052021/" target="_blank">
+          <a
+            class="hover-style"
+            href="https://dwfaradji.github.io/FaradjiBoucif_3_27052021/"
+            target="_blank"
+          >
             <img
               class="card-img-top"
               src="../assets/Ohmyfood.jpg"
@@ -36,7 +44,11 @@
       </transition>
       <transition class="fade-in">
         <div class="card mb-5 style-width">
-          <a class="hover-style" href="https://dwfaradji.github.io/FaradjiBoucif_4_27052021/" target="_blank">
+          <a
+            class="hover-style"
+            href="https://dwfaradji.github.io/FaradjiBoucif_4_27052021/"
+            target="_blank"
+          >
             <img
               class="card-img-top"
               src="../assets/chouette_agence.jpg"
@@ -49,7 +61,7 @@
         </div>
       </transition>
       <transition class="fade-in">
-        <div class="card mb-5 style-width ">
+        <div class="card mb-5 style-width">
           <a class="hover-style" href="" target="_blank">
             <img
               class="card-img-top"
@@ -63,7 +75,7 @@
         </div>
       </transition>
       <transition class="fade-in">
-        <div class="card mb-5 style-width ">
+        <div class="card mb-5 style-width">
           <a class="hover-style" href="" target="_blank">
             <img
               class="card-img-top"
@@ -77,7 +89,7 @@
         </div>
       </transition>
       <transition class="fade-in">
-        <div class="card mb-5 style-width ">
+        <div class="card mb-5 style-width">
           <a class="hover-style" href="" target="_blank">
             <img
               class="card-img-top"
@@ -101,6 +113,14 @@ export default {
 </script>
 
 <style scoped>
+@media (min-width: 576px) {
+  .parent {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center !important;
+  }
+}
 .fade-in {
   /* height: 500px; */
   margin-bottom: 50px;

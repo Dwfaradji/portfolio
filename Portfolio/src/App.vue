@@ -10,12 +10,12 @@
     </div>
     <Portfolio id="portfolio" />
     <div class="img-bar">
-      <div class="img-fond picture2"></div>
-    </div>
-    <Competences id="competences" />
-    <div class="img-bar">
       <div class="img-fond picture3"></div>
     </div>
+    <Competences id="competences" />
+    <!-- <div class="img-bar">
+      <div class="img-fond picture3"></div>
+    </div> -->
     <Footer />
   </div>
 </template>

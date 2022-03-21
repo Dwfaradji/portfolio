@@ -4,7 +4,7 @@
       <h2>Compétences</h2>
       <p>Mes compétences a votre service</p>
     </div>
-    <div class="row justify-content-between">
+    <div class="row justify-content-center">
       <transition class="fade-in">
         <div class="col-md-7">
           <h2 class="mb-5">Domaines de compétences</h2>
@@ -153,6 +153,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media (min-width: 576px) {
+  .parent {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center !important;
+  }
+}
 /* Pogresse bar test  */
 .color1 {
   background-color: #df1818;
@@ -222,7 +230,7 @@ export default {
 /* ====================================== */
 .parent {
   padding-top: 5rem;
-  width: 80%;
+  // width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
