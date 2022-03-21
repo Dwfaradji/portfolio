@@ -7,7 +7,7 @@
 
     <div class="row d-flex justify-content-between col-sm-12 parent">
       <transition class="fade-in">
-        <div class="card mb-5 style-width">
+        <div class="card m-3 style-width">
           <a
             class="hover-style"
             href="https://dwfaradji.github.io/FaradjiBoucif_2_27052021/"
@@ -25,7 +25,7 @@
         </div>
       </transition>
       <transition class="fade-in">
-        <div class="card mb-5 style-width">
+        <div class="card m-3 style-width">
           <a
             class="hover-style"
             href="https://dwfaradji.github.io/FaradjiBoucif_3_27052021/"
@@ -43,7 +43,7 @@
         </div>
       </transition>
       <transition class="fade-in">
-        <div class="card mb-5 style-width">
+        <div class="card m-3 style-width">
           <a
             class="hover-style"
             href="https://dwfaradji.github.io/FaradjiBoucif_4_27052021/"
@@ -61,7 +61,7 @@
         </div>
       </transition>
       <transition class="fade-in">
-        <div class="card mb-5 style-width">
+        <div class="card m-3 style-width">
           <a class="hover-style" href="" target="_blank">
             <img
               class="card-img-top"
@@ -75,7 +75,7 @@
         </div>
       </transition>
       <transition class="fade-in">
-        <div class="card mb-5 style-width">
+        <div class="card m-3 style-width">
           <a class="hover-style" href="" target="_blank">
             <img
               class="card-img-top"
@@ -89,7 +89,7 @@
         </div>
       </transition>
       <transition class="fade-in">
-        <div class="card mb-5 style-width">
+        <div class="card m-3 style-width">
           <a class="hover-style" href="" target="_blank">
             <img
               class="card-img-top"
@@ -173,6 +173,7 @@ a {
 
 .parent {
   padding-top: 5rem;
+  
 }
 .style-width {
   width: 25rem;
