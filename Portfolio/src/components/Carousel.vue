@@ -1,137 +1,106 @@
 <template>
-  <div class="carousel">
-    <slot :currentSlide="currentSlide" />
-    <!-- navigation -->
-    <div v-if="navEnabled" class="navigation">
-      <div class="toggle-page left">
-        <i @click="prevSlide" class="fas fa-chevron-left"></i>
-      </div>
-      <div class="toggle-page right">
-        <i @click="nextSlide" class="fas fa-chevron-right"></i>
-      </div>
-    </div>
-    <!-- Pagination -->
-    <div v-if="paginationEnabled" class="pagination">
-      <span
-        @click="goToSlide(index)"
-        v-for="(slide, index) in getSlideCount"
-        :key="index"
-        :class="{ active: index + 1 === currentSlide }"
-      >
-      </span>
-    </div>
+  <div class="home">
+    <Carousel
+      :navigation="true"
+      :pagination="false"
+      :startAutoPay="false"
+      :timeout="3500"
+      class="carousel"
+      v-slot="{ currentSlide }"
+    >
+      <Slide v-for="(slide, index) in carouselSlides.picture" :key="index">
+        <div v-show="currentSlide === index + 1" class="container-slide">
+          <img
+            class="image-slide"
+            :src="require(`../assets/${slide}.jpg`)"
+            alt=""
+          />
+          <div class="text-slide">
+            <div v-for="(slide, index) in carouselSlides.title" :key="index">
+              <h1 v-show="currentSlide === index + 1">{{ slide }}</h1>
+            </div>
+            <div
+              v-for="(slide, index) in carouselSlides.sousTitre"
+              :key="index"
+            >
+              <p v-show="currentSlide === index + 1">{{ slide }}</p>
+            </div>
+          </div>
+        </div>
+      </Slide>
+    </Carousel>
   </div>
 </template>
 
 <script>
-import { ref, onMounted } from "vue";
+import Carousel from "../views/CarouselPagination.vue";
+import Slide from "../views/CarouselSlide.vue";
 export default {
-  props: ["startAutoPay", "timeout", "navigation", "pagination"],
-  setup(props) {
-    const currentSlide = ref(1);
-    const getSlideCount = ref(null);
-    const autoPlayEnabled = ref(
-      props.startAutoPay === undefined ? true : props.startAutoPay
-    );
-    const timeoutDuration = ref(
-      props.timeout === undefined ? 5000 : props.timeout
-    );
-    const paginationEnabled = ref(
-      props.pagination === undefined ? true : props.pagination
-    );
-    const navEnabled = ref(
-      props.navigation === undefined ? true : props.navigation
-    );
-    // next slide
-    const nextSlide = () => {
-      if (currentSlide.value === getSlideCount.value) {
-        currentSlide.value = 1;
-        return;
-      }
-      currentSlide.value += 1;
+  name: "Home",
+  components: { Carousel, Slide },
+  setup() {
+    const carouselSlides = {
+      picture: ["bg-1", "bg-2", "bg-3", "bg-4"],
+      title: [
+        "Développeur Freelance",
+        "Un code source propre",
+        "Des tarifs attractif",
+        "Pour un site bien référencer",
+      ],
+      sousTitre: [
+        "À votre service",
+        "Codage uniquement a la main",
+        "Prix a la carte ",
+        "Pour nous le seo est la base ",
+      ],
     };
-    //prev slide
-    const prevSlide = () => {
-      if (currentSlide.value === 1) {
-        currentSlide.value = 1;
-        return;
-      }
-      currentSlide.value -= 1;
-    };
-    const goToSlide = (index) => {
-      currentSlide.value = index + 1;
-    };
-    // autoplay
-    const autoPlay = () => {
-      setInterval(() => {
-        nextSlide();
-      }, timeoutDuration.value);
-    };
-    if (autoPlayEnabled.value) {
-      autoPlay();
-    }
-    onMounted(() => {
-      getSlideCount.value = document.querySelectorAll(".slide").length;
-    });
-    return {
-      currentSlide,
-      nextSlide,
-      prevSlide,
-      getSlideCount,
-      goToSlide,
-      paginationEnabled,
-      navEnabled,
-    };
+    return { carouselSlides };
   },
 };
 </script>
 
-<style lang="scss">
-.navigation {
-  padding: 0 16px;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .toggle-page {
-    display: flex;
-    flex: 1;
-  }
-  .right {
-    justify-content: flex-end;
-  }
-  i {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    background-color: blanchedalmond;
+<style lang="scss" scoped>
+.text-slide {
+  text-align: center;
+  position: relative;
+  bottom: 500px;
+  color:black;
+  width: 65%;
+  overflow: hidden;
+  z-index: 1000;
+  margin: 0 auto 0 auto;
+  h1 {
     color: black;
+    font-size: 60px;
   }
 }
-.pagination {
-  position: absolute;
-  bottom: 24px;
-  width: 100%;
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  align-items: center;
-  span {
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: white;
-    box-shadow: 0 1px 3px 0 black();
+
+.carousel {
+  position: relative;
+  max-height: 100vh;
+  height: 100vh;
+  .container-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100vh;
+    height: 100vh;
+    .image-slide {
+      min-width: 100%;
+      object-fit: cover;
+      width: 100%;
+      height: 100vh;
+    }
   }
-  .active {
-    background-color: black;
+}
+@media screen and (max-width: 576px) {
+  .text-slide {
+    width: 70%;
+    bottom: 589px;
+    h1 {
+      font-size: 30px;
+    }
   }
 }
 </style>

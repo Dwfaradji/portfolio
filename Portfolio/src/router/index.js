@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Header from "../components/Header.vue";
+import Header from "../components/HeaderNav.vue";
 import Competences from "../components/Competences.vue";
 import Portfolio from "../components/Portfolio.vue";
 import Propos from "../components/Apropos.vue";

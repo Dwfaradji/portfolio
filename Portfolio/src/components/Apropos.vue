@@ -16,8 +16,13 @@
             d’activités, voir du pays et conquérir le monde !
           </p>
           <div class="text-center">
-            <button class="btn btn-outline-secondary mx-auto">
-              Contactez-moi !
+            <button class="btn mx-auto">
+              <a
+                class="btn btn-outline-secondary"
+                href="mailto:dw.faradji66@yahoo.com"
+              >
+                Contactez-moi !</a
+              >
             </button>
           </div>
         </div>
@@ -40,13 +45,16 @@ export default {
 };
 </script>
 <style scoped>
+/* a{
+  text-decoration: none;
+  color: black;
+} */
 @media (min-width: 576px) {
   .parent {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
   }
-
 }
 .fade-in {
   /* height: 500px; */
@@ -61,13 +69,8 @@ export default {
 .parent {
   padding-top: 5rem;
 }
-.container-box {
-  width: 80%;
-  margin-right: auto;
-  margin-left: auto;
-}
 p {
-  overflow: hidden;
+  overflow: scroll;
   height: 25vh;
 }
 img {
@@ -75,7 +78,5 @@ img {
   height: 43vh;
   width: 100%;
 }
-#propos {
-  padding-top: 0px;
-}
+
 </style>

@@ -5,9 +5,9 @@
       <p>Tout les projets réaliser</p>
     </div>
 
-    <div class="row d-flex justify-content-between col-sm-12 parent">
+    <div class="row d-flex justify-content-center col-sm-12 marginPortfolio">
       <transition class="fade-in">
-        <div class="card m-3 style-width">
+        <div class="card m-3 style-width card-projet">
           <a
             class="hover-style"
             href="https://dwfaradji.github.io/FaradjiBoucif_2_27052021/"
@@ -16,16 +16,16 @@
             <img
               class="card-img-top"
               src="../assets/reservia.jpg"
-              alt="Card image cap"
+              alt="projet_reservia"
             />
-            <div class="card-body border">
+            <div class="card-body border border-radius">
               <p class="card-text text-center">RÉSERVIA</p>
             </div>
           </a>
         </div>
       </transition>
       <transition class="fade-in">
-        <div class="card m-3 style-width">
+        <div class="card m-3 style-width card-projet">
           <a
             class="hover-style"
             href="https://dwfaradji.github.io/FaradjiBoucif_3_27052021/"
@@ -34,16 +34,16 @@
             <img
               class="card-img-top"
               src="../assets/Ohmyfood.jpg"
-              alt="Card image cap"
+              alt="projet_ohmyfood"
             />
-            <div class="card-body border">
+            <div class="card-body border border-radius">
               <p class="card-text text-center">OHMYFOOD</p>
             </div>
           </a>
         </div>
       </transition>
       <transition class="fade-in">
-        <div class="card m-3 style-width">
+        <div class="card m-3 style-width card-projet">
           <a
             class="hover-style"
             href="https://dwfaradji.github.io/FaradjiBoucif_4_27052021/"
@@ -52,51 +52,51 @@
             <img
               class="card-img-top"
               src="../assets/chouette_agence.jpg"
-              alt="Card image cap"
+              alt="projet_chouette_agence"
             />
-            <div class="card-body border">
+            <div class="card-body border border-radius">
               <p class="card-text text-center">CHOUETTE AGENCE</p>
             </div>
           </a>
         </div>
       </transition>
       <transition class="fade-in">
-        <div class="card m-3 style-width">
-          <a class="hover-style" href="" target="_blank">
+        <div class="card m-3 style-width card-projet">
+          <a class="hover-style" href="https://dwfaradji.github.io/kanape-online/" target="_blank">
             <img
               class="card-img-top"
               src="../assets/kanap.jpg"
-              alt="Card image cap"
+              alt="projet_kanap"
             />
-            <div class="card-body border">
+            <div class="card-body border border-radius">
               <p class="card-text text-center">KANAP</p>
             </div>
           </a>
         </div>
       </transition>
       <transition class="fade-in">
-        <div class="card m-3 style-width">
+        <div class="card m-3 style-width card-projet">
           <a class="hover-style" href="" target="_blank">
             <img
               class="card-img-top"
-              src="../assets/piquante.jpg"
-              alt="Card image cap"
+              src="../assets/piquante.webp"
+              alt="projet_sauce-piquante"
             />
-            <div class="card-body border">
+            <div class="card-body border border-radius">
               <p class="card-text text-center">SAUCE PIQUANTE</p>
             </div>
           </a>
         </div>
       </transition>
       <transition class="fade-in">
-        <div class="card m-3 style-width">
+        <div class="card m-3 style-width card-projet">
           <a class="hover-style" href="" target="_blank">
             <img
               class="card-img-top"
               src="../assets/groupomania.jpg"
-              alt="Card image cap"
+              alt="projet_groupomania"
             />
-            <div class="card-body border">
+            <div class="card-body border border-radius">
               <p class="card-text text-center">GROUPOMANIA</p>
             </div>
             <section id="sec-3"></section>
@@ -120,6 +120,15 @@ export default {
     margin-left: auto;
     justify-content: center !important;
   }
+}
+.card-projet:hover {
+  border: 3px solid red;
+  box-shadow: 2px 1px 2px red;
+  border-radius: 10px;
+}
+.marginPortfolio {
+  margin-left: 0;
+  margin-right: 0;
 }
 .fade-in {
   /* height: 500px; */
@@ -155,17 +164,10 @@ export default {
   z-index: 10000;
   transition: transform 1s ease-in;
 }
-/* .hover-style:hover {
-  
-  opacity: 0.8;
-  background-image: url("../assets/plus-solid.svg");
-  background-size: 100px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: red;
-
-  transform: translateX(0px, 50%);
-} */
+.border-radius {
+  border-radius: 15px;
+  background-color: aliceblue;
+}
 a {
   text-decoration: none;
   color: black;
@@ -173,12 +175,14 @@ a {
 
 .parent {
   padding-top: 5rem;
-  
 }
 .style-width {
   width: 25rem;
 }
 .container-fluid {
-  width: 80%;
+  width: 100%;
+}
+.card{
+  border:none !important;
 }
 </style>

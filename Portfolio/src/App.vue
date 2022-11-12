@@ -1,7 +1,9 @@
 <template>
   <div id="nav">
-    <Header />
-    <Acceuil id="home" />
+    <div>
+      <Header />
+    </div>
+    <Carousel id="home" />
     <div id="propos">
       <Apropos />
     </div>
@@ -10,7 +12,7 @@
     </div>
     <Portfolio id="portfolio" />
     <div class="img-bar">
-      <div class="img-fond picture3"></div>
+      <div class="img-fond picture2"></div>
     </div>
     <Competences id="competences" />
     <!-- <div class="img-bar">
@@ -21,8 +23,8 @@
 </template>
 
 <script>
-import Header from "./components/Header";
-import Acceuil from "./components/Acceuil";
+import Header from "./components/HeaderNav";
+import Carousel from "./components/Carousel";
 import Apropos from "./components/Apropos";
 import Portfolio from "./components/Portfolio";
 import Competences from "./components/Competences";
@@ -32,7 +34,7 @@ export default {
   name: "App",
   components: {
     Header,
-    Acceuil,
+    Carousel,
     Apropos,
     Portfolio,
     Competences,
@@ -64,9 +66,7 @@ export default {
     );
     document.addEventListener("scroll", this.handleScroll);
   },
-  unmounted() {
-    document.removeEventListener("scroll", this.handleScroll);
-  },
+
 };
 </script>
 
@@ -94,13 +94,13 @@ export default {
   background-repeat: no-repeat;
 }
 .picture1 {
-  background-image: url("./assets/bg-2.jpg");
+  background-image: url(./assets/bg-2.jpg);
 }
 .picture2 {
-  background-image: url("./assets/bg-1.jpg");
+  background-image: url(./assets/bg-1.jpg);
 }
 .picture3 {
-  background-image: url("./assets/bg-4.jpg");
+  background-image: url(./assets/bg-4.jpg);
 }
 
 * {

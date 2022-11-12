@@ -4,23 +4,23 @@
       id="scroll"
       class="navbar navbar-expand-lg justify-content-between size fixed-top bar-fix"
     >
-      <a id="logo-scroll" class="navbar-brand">DEVCOPS</a>
+
+      <a href="#home" id="logo-scroll" class="navbar-brand">
+        <img src="../assets/logo.png" alt="logo_de_chez_devCops">DEVCOPS
+      </a>
       <!-- toggle -->
       <button
         id="toggle-scroll"
         class="navbar-toggler navbar-dark bg-dark"
         type="button"
         data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
         aria-expanded="false"
-        aria-label="Toggle navigation"
       >
         <span id="toggle-icon" class="navbar-toggler-icon"></span>
       </button>
       <!-- Navigation -->
       <div class="collapse navbar-collapse nav" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
+        <div id="text-nav" class="navbar-nav">
           <a
             id="nav-text0"
             href="#home"
@@ -72,8 +72,9 @@
 </template>
 <script>
 export default {
-  name: "Header",
+  name: "HeaderNav",
   data() {
+
     window.onscroll = () => {
       if (document.documentElement.scrollTop > 50) {
         document.getElementById("scroll").style.background = "white";
@@ -83,6 +84,8 @@ export default {
         document.getElementById("nav-text2").style.color = "black";
         document.getElementById("nav-text3").style.color = "black";
         document.getElementById("nav-text4").style.color = "black";
+        document.querySelector(".nav").style.background = "white";
+        document.getElementById("text-nav").style.color = "black";
       } else {
         document.getElementById("scroll").style.background = "black";
         document.getElementById("logo-scroll").style.color = "white";
@@ -91,31 +94,58 @@ export default {
         document.getElementById("nav-text2").style.color = "white";
         document.getElementById("nav-text3").style.color = "white";
         document.getElementById("nav-text4").style.color = "white";
-        // document.getElementById("nav-text").style.color = "white";
+        document.querySelector(".nav").style.background = "black";
+        document.getElementById("text-nav").style.color = "white";
       }
     };
+
   },
 
-  mounted() {},
+  mounted() {
+    const x = document.querySelector("#nav-text0")
+    const z = document.querySelector("#navbarNavAltMarkup")
+    console.log(z)
+    x.addEventListener("click",(e)=>{
+      console.log(e)
+      z.style.display ="none";
+    })
+   const x1 = document.querySelector("#toggle-scroll")
+    const z1 = document.querySelector("#navbarNavAltMarkup")
+    console.log(z)
+    x1.addEventListener("click",(e)=>{
+      console.log(e)
+      z1.style.display ="block";
+    })
+
+
+
+
+  },
+
+
 };
 </script>
 <style scoped>
+img{
+  width: 50px ;
+}
 a:hover {
   border-bottom: 5px solid red;
-  padding-bottom:2px ;
+  padding-bottom: 2px;
 }
 a {
-  color: black
+  color: black;
 }
 #scroll {
   transition: 0.4s;
-  height: 5rem;
 }
 .size {
   font-size: 1.5rem;
 }
 .nav {
   flex-grow: 0;
+  padding-left: 15px;
+  transition: 0.4s;
 }
 .margin {
   margin-right: 2rem;

@@ -2,13 +2,25 @@
   <footer>
     <ul class="footer__icone">
       <li>
-        <a href="https://www.linkedin.com/in/boucif-faradji" target="_blank"><i class="fab fa-linkedin-in"></i> </a>
+        <a
+          href="https://www.linkedin.com/in/boucif-faradji"
+          aria-label="lien_linkedin"
+          target="_blank"
+          ><i class="fab fa-linkedin-in"></i>
+        </a>
       </li>
       <li>
-        <a href="https://github.com/Dwfaradji" target="_blank"><i class="fab fa-github"></i> </a>
+        <a
+          href="https://github.com/Dwfaradji"
+          target="_blank"
+          aria-label="lien_github"
+          ><i class="fab fa-github"></i>
+        </a>
       </li>
       <li>
-        <a href="" target="_blank"><i class="fab fa-twitter"></i> </a>
+        <a href="" target="_blank" aria-label="lien_twitter"
+          ><i class="fab fa-twitter"></i>
+        </a>
       </li>
     </ul>
     <p class="footer__text">Copyright 2022 - Mentions legales</p>

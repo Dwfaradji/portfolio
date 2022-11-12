@@ -4,9 +4,9 @@
       <h2>Compétences</h2>
       <p>Mes compétences a votre service</p>
     </div>
-    <div class="row justify-content-center">
+    <div class="container_one justify-content-center">
       <transition class="fade-in">
-        <div class="col-md-7">
+        <div class="col-md-5">
           <h2 class="mb-5">Domaines de compétences</h2>
           <h3>
             <i class="fas fa-check-circle text-danger mr-2 check"></i>GESTION DE
@@ -16,24 +16,13 @@
             Site vitrine, corporate, évènementiel, e-commerce, intranet,
             application mobile.
           </p>
-          <h3>
-            <i class="fas fa-check-circle text-danger mr-2 check"></i>CONCEPTION
-            GRAPHIQUE WEBDESIGN
-          </h3>
-          <p>
-            Logos, templates Web, plaquettes publicitaires, cartes de visite,
-            newsletters...
-          </p>
+
           <h3>
             <i class="fas fa-check-circle text-danger mr-2 check"></i
             >APPLICATIONS SPÉCIFIQUES ET INTERFACE D'ADMINISTRATION
           </h3>
-          <p>PHP - MYSQL - AJAX / ASP.NET - C# - SQL</p>
-          <h3>
-            <i class="fas fa-check-circle text-danger mr-2 check"></i>MISE EN
-            PLACE / MODIFICATION / GESTION DE CMS
-          </h3>
-          <p>Wordpress, Joomla, Prestashop, phpBB, IPBoard</p>
+          <p>JS - MYSQL - AJAX / ASP.NET - NODE.JS</p>
+
           <h3>
             <i class="fas fa-check-circle text-danger mr-2 check"></i
             >INTÉGRATION (X)HTML / CSS
@@ -43,7 +32,7 @@
             <i class="fas fa-check-circle text-danger mr-2 check"></i>DYNAMISE
             DES PAGES PAR JAVASCRIPT / AJAX
           </h3>
-          <p>jQuery, Prototype, Mootools, Scriptaculous</p>
+          <p>Angular, Vue, TypeScript , React</p>
           <h3>
             <i class="fas fa-check-circle text-danger mr-2 check"></i>VALIDATION
             W3C, WAI RÉFÉRENCEMENT NATUREL SEO
@@ -57,7 +46,7 @@
         </div>
       </transition>
 
-      <transition class="fade-in">
+      <transition class="fade-in col-md-5">
         <div>
           <h2>Compétences en développement</h2>
           <div class="mt-5 col-md-12">
@@ -65,6 +54,7 @@
               <div
                 class="progress-bar bar color1"
                 role="progressbar"
+                aria-valuetext="90%"
                 style="width: 90%"
                 aria-valuenow="15"
                 aria-valuemin="0"
@@ -153,6 +143,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container_one {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 @media (min-width: 576px) {
   .parent {
     width: 100%;
@@ -161,7 +156,7 @@ export default {
     justify-content: center !important;
   }
 }
-/* Pogresse bar test  */
+/* Progresse bar test  */
 .color1 {
   background-color: #df1818;
   border-radius: 15px;
